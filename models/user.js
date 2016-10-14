@@ -7,7 +7,8 @@ var UserSchema = new mongoose.Schema({
 });
 
 UserSchema.statics.getUserByinfo = function(name,email,callback){
-    var cond = ['$or',{name:name}, {email:email}];
+    //var cond = ['$or',{name:name}, {email:email}];
+    var cond = {$or:[{name:name},{email:email}]};
     this.find(cond, callback);
 }
 
