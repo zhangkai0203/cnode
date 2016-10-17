@@ -1,0 +1,14 @@
+//markdown-it的demo
+http://markdown-it.github.io/
+
+//关于极客学院express实例
+http://wiki.jikexueyuan.com/project/express-mongodb-setup-blog/head-portrait.html
+
+//express 学习教程
+http://www.open-open.com/lib/view/open1454560780730.html
+
+//mongodb 学习资料
+http://www.cnblogs.com/zhongweiv/p/node_mongodb.html
+
+//mongoose 学习笔记
+http://yuankeqiang.lofter.com/post/8de51_b0cfcd
