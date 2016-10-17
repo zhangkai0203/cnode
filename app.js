@@ -29,13 +29,15 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('/public',express.static(path.join(__dirname, 'public')));
 
 //session
 app.use(session({
-  secret: 'sdfdsfsdfsdfsd',
-  resave: true,
-  saveUninitialized: true
+  secret: '12345',
+  name: 'testapp',   //这里的name值得是cookie的name，默认cookie的name是：connect.sid
+  cookie: {maxAge: 8000000 },  //设置maxAge是80000ms，即80s后session和相应的cookie失效过期
+  resave: false,
+  saveUninitialized: true,
 }))
 
 app.use(function(req, res, next){

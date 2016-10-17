@@ -27,6 +27,7 @@ router.get('/tid/:id', function(req, res, next){
         if(replys.length != 0){
             replys.forEach(function(item){
                 item.date = fun.formatTime(item.insertTime);
+                //item.data = md.render(item.content);
             })
         }
         em.emit('reply_data_ok' ,replys); 
